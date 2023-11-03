@@ -28,6 +28,11 @@ jobs:
 
       - name: Build website
         run: npm run build
+    
+      - name: Upload Artifact  
+        uses: actions/upload-artifact@v3
+        with:
+            path: build
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
